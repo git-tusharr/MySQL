@@ -120,143 +120,7 @@ POWER()/POW() - example :
 ROUND() - example : select round(345.345);
 SIGN() - example : select sign(-345.896);
 SQRT() - example : select sqrt(81);
-TRUNCATE() - example :  select truncate(11.548,2);
-
-
-
-
-26. Aggregate function 
-MAX() - example : 
-MIN()- example : 
-COUNT()- example : 
-SUM() - example : 
-AVG() - example :
-
-
-
-Commands of MySQL ~
-
-1.Create database in MySQL we can use following command ~ create database databaseName; 
-  example : create database sql4pm; 
-
-
-
-2.To delete or drop particular database we can use following command~ drop database databaseName;
-
-
-3.To show the list of the databases we can use following command : show databases;
-
-
-
-4.Clear screen ~system cls
-
-
-5.To select particular data base we can use following command : use databaseName;
-
-
-6.To check the current database we can use the following command : select database();
-
-
-7.To create table in MySQL we can use "create table tableName"
-  Syntax:- create table tableName(columnName type(size),columnName type(size),.....)
-  Example :- create table student(rollno int(10),name varchar(10),class varchar(10),fees int);
-
-
-8.To show the list of the tables in the particular database we use the following commands :show tableName;
-
-
-9.To show the table definition and fields and type and size of the columns we can use the following commands : describe tableName; or desc    
-  tableName;
-
-10.Insert record :to insert data in table we use the following - insert into tablename(columnName,columname2,...) values(value1,value2,...);
-
-
-11.Insert multiple records to insert multiple records inside table we can use following syntax -
-   insert into tablename(columnName,columname2,...) values(value1,value2,...),(value1,value2,...),(value1,value2,...);
-
-
-12.Select statement : To select all records from table we can use following statement - select * from tablename;
-   example : select * from students;
-
-
-13.Select particular columns - To select particular fields from table we can use following command - select columnname,columnname2,.. from tablename;
-   select rollno,name from student;
-
-
-14.where clause : using where clause we can find data according to condition using this keyword we can define any type of condition
-   styntax : SQL statement where condition;
-   example :select * from student where rollno = 101;
-
-
-15.Update statement It is used to change or modify the data of the table using this statement we can update any information of the table
-   syntax : update tablename set columnname=value where condition;
-   example: update student set name="tushar" where rollno=104;
-
-16.Delete statement : Used to delete records from the tables of database
-   Syntax : delete from tablename where condition;
-   Example : delete from student where rollno=106;
-
-
-17. And & Or operator : and works when both the conditionws are true where Or operator works when both or any one conditions are true
-
-
-18.Between operator : it is used to find records from one limit to another limit this operator work with numeric or date datatype
-   Syntax : select * from tablename where columnname between lowerlimit and upperlimit;
-   example : select * from student where rollno between 113 and 117;
-
-
-
-19.in & not in operator : in operator works when included data are available where as not in work when included data are not available
-
-
-
-20.Distinct keyword : this keyword is used to find unique data from table
-
-
-
-21.like operator : it is a pattern matching operator this operator find records according to pattern this operator has two parameter first is _(underscore) second is %(percentage)
-  _(underscore) is used to drop one character at a time
-  %(percentage) is used to drop multiple character at a time
-
-
- 
-22.order by : used to find record ascending or descending order 
-  to display in descending order we use desc keyword and to display in ascending order we use asc     
-  keyword
-
-
-
-
-23. SQL data types
-
-MySQL comes with the following data type for storing a date /time value in the database:
-DATE-format YYYY-MM-DD example : insert into emp2 values (105,'sanjeev','hr','2025-12-30',85000);
-DATETIME- format YYYY-MM-DD HH:MI:SS
-TIMESTAMP-formatYYYY-MM-DD HH:MI:SS
-YEAR- formatYYYY or YY
-
-
-
-
-24. MySQL functions
-
-CHAR
-CONCAT() - example : select concat("mr. ",name) from student;
-LOWECASE() example :select lower(name) from student;
-SUBSTRING() - example : select substr("vanshika pandey",3,4); or select substr(class,1,3) from student;
-UPPER() - example :select upper(name) from student;
-TRIM() - example : select trim(name),length(name) from student;
-LENGTH() - example : select trim(name),length(name) from student;
-
-
-
-25. MySQL numeric function
-MOD() - example : select mod(15,4);
-POWER()/POW() - example :
-ROUND() - example : select round(345.345);
-SIGN() - example : select sign(-345.896);
-SQRT() - example : select sqrt(81);
-TRUNCATE() - example :  select truncate(11.548,2);
+TRUNCATE() - example :  select truncate(11.548,2); usd to
 
 
 
@@ -280,6 +144,11 @@ sysdate() example :-
 
 
 
+28. Constraints : 
+
+1. not null
+2. unique key
+3. 
 
 
 
@@ -312,7 +181,7 @@ sysdate() example :-
 
 
 
-
+ 
 
 
 

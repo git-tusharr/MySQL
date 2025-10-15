@@ -58,7 +58,7 @@ Commands of MySQL ~
 
 16.Delete statement : Used to delete records from the tables of database
    Syntax : delete from tablename where condition;
-   Example : delete from student where rollno=106;
+   Example : delete from student where rollno=106; 
 
 
 17. And & Or operator : and works when both the conditionws are true where Or operator works when both or any one conditions are true
@@ -146,11 +146,11 @@ sysdate() example :-
 
 28. Constraints : 
 
-1. not null
-2. unique key
-3. 
-
-
+1. not null :- not null values can be inserted.
+2. unique key :- not duplicate but allows null.
+3. primary key :- neither duplicate values nor null.
+4. foreign key :- used to establish relationship between two table and it is applied to child table and parent table must be primary key.
+5. 
 
 
 

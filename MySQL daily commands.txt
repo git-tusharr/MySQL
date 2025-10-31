@@ -155,13 +155,60 @@ sysdate() example :-
 
 
 
+29. Join :- join clause is used to 
+
+1.Inner join
+
+a. equie join - select a.rollno,a.name,a.class,b.marks,b.result
+    -> from student1 a inner join student2 b on (a.rollno=b.rollno);
+
+b. Theta join -  select a.rollno,a.name,a.class,b.marks,b.result from student1 a inner join student2 b on (a.rollno>b.rollno);
+
+
+2.Outer join
+
+a. left outer join - select a.rollno,a.name,a.class,b.marks,b.result from student1 a left outer join student2 b on (a.rollno=b.rollno);
+b. right outer join - select a.rollno,a.name,a.class,b.marks,b.result from student1 a right outer join student2 b on (a.rollno=b.rollno);
+c. full outer join - select a.rollno,a.name,a.class,b.marks,b.result from student1 a full outer join student2 b on (a.rollno=b.rollno);
+		   - select a.rollno,a.name,a.class,b.marks,b.result from student1 a left outer join student2 b on (a.rollno=b.rollno)
+    -> union select a.rollno,a.name,a.class,b.marks,b.result from student1 a right outer join student2 b on (a.rollno=b.rollno);
+
+
+3. Self join 
+	
+    select a.name,a.salary as higherSalary ,b.name,b.salary as lowerSalary from
+    -> myemp a join myemp b on (a.salary>b.salary) order by a.name;
+
+
+4.Natural join 
+
+     select * from student1 natural join student2;
+
+5.Cartesian product
+    
+    select * from student1,student2;
 
 
 
 
+30. Auto increment 
 
 
+31.Alter add column:- alter table student1 add column fees int;
 
+32. Alter drop column:- alter table student1 drop column fees int;
+
+33. Alter reaname column:- alter table student rename column class to subject;
+
+34. Alter Constraints :- alter table student1 modify rollno int not null;
+
+35. Alter Unique :- alter table student1 add unique( rollno);
+			
+
+36. Alter Primary key :-  alter table student1 add primary key (rollno);
+                      :-  alter table student1 drop primary key;
+
+37. Alter Foregin key :- 
 
 
 

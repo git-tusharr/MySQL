@@ -210,6 +210,15 @@ c. full outer join - select a.rollno,a.name,a.class,b.marks,b.result from studen
 
 37. Alter Foregin key :- 
 
+38. Alter check :- alter table student1 add check (rollno<=200);
+
+39. Alter set default value :-  alter table student1
+   				 -> alter subject set default 'btech';
+
+40. Alter drop default value :-  alter table student1
+   				 -> alter subject set default 'btech';
+
+41. Index :- it is used for fasr searching
 
 
 

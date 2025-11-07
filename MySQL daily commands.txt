@@ -293,6 +293,70 @@ ii) Savechanges
 
 
 
+47.Window function  
+
+
+mysql> select name,age ,department,avg(salary) over (partition by salary) as "avg Salary" from employee;
++---------+------+------------+------------+
+| name    | age  | department | avg Salary |
++---------+------+------------+------------+
+| Ram     |   28 | Finance    | 20000.0000 |
+| Pradeep |   22 | Sales      | 20000.0000 |
+| Deep    |   25 | Sales      | 30000.0000 |
+| Ramesh  |   20 | Finance    | 50000.0000 |
+| Suresh  |   22 | Finance    | 50000.0000 |
++---------+------+------------+------------+
+
+
+i) Rank() Function
+
+ select name ,department,salary,
+ -> rank() over (partition by department order by salary desc) as empRank from employee;
++---------+------------+--------+---------+
+| name    | department | salary | empRank |
++---------+------------+--------+---------+
+| Ramesh  | Finance    |  50000 |       1 |
+| Suresh  | Finance    |  50000 |       1 |
+| Ram     | Finance    |  20000 |       3 |
+| Deep    | Sales      |  30000 |       1 |
+| Pradeep | Sales      |  20000 |       2 |
++---------+------------+--------+---------+
+
+
+ii)dense_rank() :-
+
+mysql> select name ,department,salary,
+    -> dense_rank() over (partition by department order by salary desc) as empRank from employee;
++---------+------------+--------+---------+
+| name    | department | salary | empRank |
++---------+------------+--------+---------+
+| Ramesh  | Finance    |  50000 |       1 |
+| Suresh  | Finance    |  50000 |       1 |
+| Ram     | Finance    |  20000 |       2 |
+| Deep    | Sales      |  30000 |       1 |
+| Pradeep | Sales      |  20000 |       2 |
++---------+------------+--------+---------+
+
+
+iii) Row_number() :- 
+
+mysql> select name,department ,salary,
+    -> row_number() over (partition by department order by salary desc) as "emp rank" from employee;
++---------+------------+--------+----------+
+| name    | department | salary | emp rank |
++---------+------------+--------+----------+
+| Ramesh  | Finance    |  50000 |        1 |
+| Suresh  | Finance    |  50000 |        2 |
+| Ram     | Finance    |  20000 |        3 |
+| Deep    | Sales      |  30000 |        1 |
+| Pradeep | Sales      |  20000 |        2 |
++---------+------------+--------+----------+
+
+
+48. Export import sql :- 
+
+
+
 
 
 

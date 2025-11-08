@@ -308,6 +308,9 @@ mysql> select name,age ,department,avg(salary) over (partition by salary) as "av
 +---------+------+------------+------------+
 
 
+
+
+
 i) Rank() Function
 
  select name ,department,salary,
@@ -340,6 +343,10 @@ mysql> select name ,department,salary,
 
 iii) Row_number() :- 
 
+
+
+
+
 mysql> select name,department ,salary,
     -> row_number() over (partition by department order by salary desc) as "emp rank" from employee;
 +---------+------------+--------+----------+
@@ -354,6 +361,12 @@ mysql> select name,department ,salary,
 
 
 48. Export import sql :- 
+
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysqldump -u root -p sql4pm > D:\SqlBackup\sql4pmBackup.sql
+Enter password: ***********
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>
 
 
 

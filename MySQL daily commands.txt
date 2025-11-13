@@ -286,11 +286,7 @@ mysql> select * from student;
 6 rows in set (0.00 sec)
 
 
- 
-
 ii) Savechanges
-
-
 
 
 47.Window function  
